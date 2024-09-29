@@ -1,0 +1,66 @@
+.countiner1{
+    display: flex;
+    flex-direction:row; 
+    gap: 10px;
+    width:auto;
+    justify-content: center;
+}
+#name{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:  #ce4987  ;
+    font-style: italic;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px whitesmoke;
+    margin: 0;
+    padding: 0;
+    line-height: 80px;
+    top:100px;
+}
+#logo{
+    padding: 0%;
+    top: 50px;
+    right: 50px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px rgb(93, 91, 91);
+}
+
+header{
+    background-color: #c9377b;
+    padding: 100px;
+    width: 100%;
+    height:100px;
+    top: 0px;
+    padding: 4px;
+    border-bottom: 5px solid #5a3863;
+}
+
+body{
+    /* background-color: cadetblue; */
+
+    background-color: whitesmoke;
+    color: #492a6d;
+}
+
+#countiner2{
+    display: flex;
+    flex-direction:row; 
+    gap: 10px;
+    width:100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game{
+    width: 600px;
+    height: 600px;
+    background-color: #ce4987;
+    gap: 20px;
+    border-radius: 40px;
+    text-align: center;
+    margin: 100px;
+    align-content: center;
+}
+

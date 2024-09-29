@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+   
+    <title>main page</title>
+</head>
+<body dir="rtl">
+    <header> 
+        <div class="countiner1">
+            <h1 id="name"> game </br> </h1>
+            <!-- <a href="../home.html" > -->
+            <!-- <img id="logo" src="" alt="logo" width="170px" height="100px" > </a> -->
+        </div>
+    </div>
+    </header>
+    <form id="form1" >
+        <label id="title"> התחברות: </label> </br></br>
+        <label for="pName"> שם פרטי :</label> </br>
+        <input type="text" id="pName" name="pName" maxlength="20" minlength="2" required ></br></br>
+        <label for="password">סיסמא:</label></br>
+        <input type="password" id="password" name="password" required /></br></br>
+        <p id="notExist"> המשתמש לא קיים </p>
+        <input type="submit" value="אישור" onclick="chackIdanitiy(event)" /> </br></br>
+        <label> אין לך משתמש? להרשמה לחץ <a href="./html/registering.html"> <span id="span">כאן  </span> </a></label>
+    </form>
+    
+
+    <script src="./javaScript/index.js"></script>
+</body>
+</html>

@@ -8,16 +8,22 @@ function runSubmit(event) {
     if (arr == null) {
         exist = true;
         arr = [];
-    }
-    else {
+    }else if (userName.trim() === "" || password.trim() === "") {
+        document.getElementById("notExist").innerText = "הכנס שם משתמש או סיסמא";
+        document.getElementById("notExist").style.display = "block";
+    } else {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i].userName.trim() === userName.trim()) {
                 document.getElementById("notExist").style.display = "block";
                 document.getElementById("notExist").innerText = "שם המשתמש תפוס ";
+                exist=false;
+                break;
             }
             else if (arr[i].password.trim() === password.trim()) {
                 document.getElementById("notExist").style.display = "block";
                 document.getElementById("notExist").innerText = "הסיסמא תפוסה  ";
+                exist=false;
+                break;
             }
             else { exist = true }
         }

@@ -1,4 +1,6 @@
 const arrayValue = localStorage.getItem('arr');
+localStorage.setItem('userName', null);
+
 let arr = JSON.parse(arrayValue);
 function chackIdanitiy(event) {
     event.preventDefault();

@@ -41,10 +41,22 @@ function setTime(){
                 gameOver.textContent = "הזמן נגמר!!";
                 gameOver.style.fontSize = "80px";
                 gameOver.style.color = "pink";
-                document.getElementsByClassName("gameArea")[0].appendChild(gameOver)
+                document.getElementById("gameArea").appendChild(gameOver)
                 document.getElementById("countiner").style.display="none";
-                timer.style.fontSize="70px";
-                timer.style.color="pink";
+                // timer.style.fontSize="70px";
+                // timer.style.color="pink";
+                let arr = [];
+                if(!JSON.parse(localStorage.getItem('arrScores')))
+                {
+                    localStorage.setItem('arrScores', JSON.stringify(arr));
+                    arr.push({"uName": JSON.parse(localStorage.getItem('userName')), "score": score});
+                }
+                else{
+                    arr = JSON.parse(localStorage.getItem('arrScores'));
+                    arr.push({"uName": JSON.parse(localStorage.getItem('userName')), "score": score});
+                }
+                localStorage.setItem('arrScores', JSON.stringify(arr));
+
         }
     }, 1000);
 }

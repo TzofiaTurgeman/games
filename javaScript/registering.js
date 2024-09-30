@@ -1,4 +1,5 @@
 let arr = JSON.parse(localStorage.getItem('arr'));
+
 function runSubmit(event) {
     event.preventDefault();
     var userName = document.getElementById("pName").value;
@@ -24,7 +25,9 @@ function runSubmit(event) {
     if (exist) {
         arr.push({ "userName": userName, "password": password })
         localStorage.setItem('arr', JSON.stringify(arr));
-        window.location.href = "../index.html";
+        localStorage.setItem('userName', JSON.stringify(userName));
+        window.location.href = "../html/selectGame.html";
         alert("ההרשמה בוצעה בהצלחה ");
     }
+
 }

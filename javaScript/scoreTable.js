@@ -1,8 +1,7 @@
 const arrayValue = localStorage.getItem('userName');
-console.log(arrayValue)
 const uName = JSON.parse(arrayValue)
 document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
-arr = JSON.parse(localStorage.getItem('arrScores'));
+arr = JSON.parse(localStorage.getItem('arrTimes'));
 let place1 = {...arr[0]};
 let place2 = {minutes:60, seconds:0};
 let place3 = {minutes:60, seconds:0};
@@ -42,9 +41,6 @@ for(let i = 1; i < arr.length; i++){
         }
     }
 }
-console.log(place1);
-console.log(place2);
-console.log(place3);
 function checkWithPlace2(otherTime){
     if(otherTime.minutes < place2.minutes){
         place3 = {...place2};
@@ -92,3 +88,48 @@ if(document.getElementById("uName-place3").seconds < 10){
 else{
     document.getElementById("time-place3").textContent = place3.minutes + ":"  + place3.seconds;
 }
+
+let score1 = {score: 0};
+let score2 = {score: 0};
+let score3 = {score: 0};
+let arrScores = JSON.parse(localStorage.getItem('arrScores'));
+for(let i = 0; i < arrScores.length; i++){
+    if(arrScores[i].score > score1.score){
+        score3 = {...score2};
+        score2 = {...score1};
+        score1 = {...arrScores[i]};
+    }
+    else if(arrScores[i].score < score1.score){
+        if(checkWithScore2(arrScores[i])){
+            score3 = {...score2};
+            score2 = {...arrScores[i]};
+        }
+        else{
+            if(checkWithScore3(arrScores[i])){
+                score3 = {...arrScores[i]};
+            }
+        }
+    }
+    else{
+        score3 = {...score2};
+        score2 = {...arrScores[i]};
+    }
+}
+function checkWithScore2(otherScore){
+    if(otherScore.score > score2.score){
+        return true;
+    }
+}
+function checkWithScore3(otherScore){
+    if(otherScore.score > score3.score){
+        return true;
+    }
+}
+document.getElementById("uName-score1").textContent = score1.uName;
+document.getElementById("score1").textContent = score1.score;
+
+document.getElementById("uName-score2").textContent = score2.uName;
+document.getElementById("score2").textContent = score2.score;
+
+document.getElementById("uName-score3").textContent = score2.uName;
+document.getElementById("score3").textContent = score2.score;

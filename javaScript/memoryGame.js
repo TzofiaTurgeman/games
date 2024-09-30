@@ -99,20 +99,20 @@ function compareImg(){
         });
         document.getElementsByClassName("gameArea")[0].appendChild(restart)
         let arr = [];
-        if(!JSON.parse(localStorage.getItem('arrScores')))
+        if(!JSON.parse(localStorage.getItem('arrTimes')))
         {
-            localStorage.setItem('arrScores', JSON.stringify(arr));
+            localStorage.setItem('arrTimes', JSON.stringify(arr));
             const minutes = Math.floor(seconds / 60);
             const remainingSeconds = seconds % 60;
             arr.push({"uName": JSON.parse(localStorage.getItem('userName')), "minutes": minutes, "seconds": remainingSeconds});
-            localStorage.setItem('arrScores', JSON.stringify(arr));
+            localStorage.setItem('arrTimes', JSON.stringify(arr));
         }
         else{
-            arr = JSON.parse(localStorage.getItem('arrScores'));
+            arr = JSON.parse(localStorage.getItem('arrTimes'));
             const minutes = Math.floor(seconds / 60);
             const remainingSeconds = seconds % 60;
             arr.push({"uName": JSON.parse(localStorage.getItem('userName')), "minutes": minutes, "seconds": remainingSeconds});
-            localStorage.setItem('arrScores', JSON.stringify(arr));
+            localStorage.setItem('arrTimes', JSON.stringify(arr));
         }
     }
 }

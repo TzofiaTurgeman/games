@@ -91,3 +91,16 @@ body{
     display: none;
   }
 
+#timer, #tryAgain{
+  display: none;
+  font-size: 25px;
+  justify-self: center;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+#eror{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}

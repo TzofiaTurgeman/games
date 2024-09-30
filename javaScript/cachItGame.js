@@ -21,7 +21,7 @@ function clickOnX(){
 }
 
 function setTime(){
-    seconds = 40;
+    seconds = 5;
     timerDisplay.textContent = "0:40";
     timer = setInterval(() => {
         seconds--;
@@ -36,15 +36,24 @@ function setTime(){
             clearInterval(timer);
             clearInterval(changePos);
                 let gameOver = document.createElement('div');
-                gameOver.style.width = "80vw";
-                gameOver.style.height = "40vh";
-                gameOver.style.backgroundColor = "whit";
+                gameOver.style.width = "40vw";
+                gameOver.style.height = "10vh";
                 gameOver.style.fontWeight="bold"
+                gameOver.style.textAlign = "center";
+                gameOver.style.justifyContent = "center";
                 gameOver.textContent = "הזמן נגמר!!";
                 gameOver.style.fontSize = "80px";
                 gameOver.style.color = "pink";
                 document.getElementById("gameArea").appendChild(gameOver)
                 document.getElementById("countiner").style.display="none";
+                let restart = document.createElement('button');
+                restart.style.width = "10vw";
+                restart.style.height = "5vh";
+                restart.textContent = "משחק חדש";
+                restart.addEventListener("click", function(){
+                    window.location.href = "./cachItGame.html";
+                });
+                document.getElementById("gameArea").appendChild(restart);
                 // timer.style.fontSize="70px";
                 // timer.style.color="pink";
                 let arr = [];

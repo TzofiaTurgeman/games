@@ -20,6 +20,10 @@
         </div>
     </div>
     </header>
+    <div id="eror">
+        <p id="tryAgain">ניסיונות מרובים. נסה שוב בעוד:</p>
+        <div id="timer"></div>
+    </div>
     <form id="form1" >
         <label id="title"> התחברות: </label> </br></br>
         <label for="pName"> שם משתמש :</label> </br>
@@ -27,7 +31,7 @@
         <label for="password">סיסמא:</label></br>
         <input type="password" id="password" name="password" required /></br></br>
         <p id="notExist"> המשתמש לא קיים </p>
-        <input type="submit" value="אישור" onclick="chackIdanitiy(event)" /> </br></br>
+        <input id="submit" type="submit" value="אישור" onclick="chackIdanitiy(event)" /> </br></br>
         <label> אין לך משתמש? להרשמה לחץ <a href="./html/registering.html"> <span id="span">כאן  </span> </a></label>
     </form>
     

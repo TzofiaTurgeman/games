@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/generalStyle.css">
+    <link rel="stylesheet" href="../css/cachItGame.css">
+    <title>cachItGame</title>
+</head>
+<body dir="rtl">
+    <header> 
+        <div class="countiner1">
+            <a class="login" href="../index.html">
+                <img class="loginimg" src="../pic/login.png"/>
+                <div class="userName"></div>
+            </a>
+            <a href="../html/selectGame.html" ><h1 id="name"> game </br> </h1></a>
+            <a href="../html/selectGame.html" >
+            <img id="logo" src="../pic/logoForPrj.png " alt="logo" width="170px" height="100px" > </a>
+        </div>
+    </div>
+    </header>
+    <main> 
+    <div id="insraction">
+        <span id="eix" onclick="startGame()"> &#x2718 </span>
+        <div style="margin-right: 40px;">
+    </br>
+       <span style="font-weight: bolder;"> הוראות משחק:  </span>
+    </br> 
+        במשחק יש ארבעה ריבועים- שלוש בצבע כחול ואחד בצבע ורוד המופעים בסדר רנדומלי על המסך.
+    </br>
+         סדר הריבועים משתנה כל שתי שניות מלחיצה על אחד הריבועים או כל שתי שניות ללא לחיצה בכלל. 
+        </br>
+        כאשר לוחצים על הריבוע הורוד צוברים 5 נקודות וכאשר לוחצים על הריבוע הכחול יורדים 5 נקודות
+</br>
+        המשחק נגמר כאשר הזמן נגמר
+    </br>
+    המטרה-לצבור כמה שיותר נקודות
+</br>
+בהצלחה!
+
+
+</div>
+<!-- onload="startGame()" -->
+<section>
+    <p id="score" style="font-size: 100px; border: 3px solid rgb(69, 38, 58); padding: 5px;text-align: center;"> score:  </p>
+
+ <div id="countiner" onload="startGame()">
+    <div id="div1" onclick="increaseScore()">1 </div>
+    <div id="div2" onclick="decreaseScore()"> 2</div>
+    <div id="div3" onclick="decreaseScore()"> 3</div>
+    <div id="div4" onclick="decreaseScore()">4 </div>
+ </div>
+
+</section>
+</main>
+
+    <script src="../javaScript/cachItGame.js"> </script>
+</body>
+</html>

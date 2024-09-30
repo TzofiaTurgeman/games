@@ -5,7 +5,13 @@ document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
 let timerDisplay = document.getElementById('timer');
 let timer;
 let seconds = 0;
-setTime();
+// setTime();
+
+function clickOnX(){
+    document.getElementById("insraction").style.display = "none";
+    setTime();
+}
+
 let removedCard=0;
 function setTime(){
     seconds = 0;
@@ -36,7 +42,7 @@ for(let i = 0; i < cards.length; i++){
     }
 });
 }
-let images = ["../pic/apple1.png", "../pic/apple1.png", "../pic/fish.png", "../pic/fish.png", "../pic/goodYear.png", "../pic/goodYear.png", "../pic/honey1.png", "../pic/honey1.png", "../pic/pomegranate.png", "../pic/pomegranate.png", "../pic/shofar.png", "../pic/shofar.png"];
+let images = [ "../pic/goodYear.png", "../pic/goodYear.png","../pic/apple1.png", "../pic/apple1.png", "../pic/fish.png", "../pic/fish.png", "../pic/honey1.png", "../pic/honey1.png", "../pic/pomegranate.png", "../pic/pomegranate.png", "../pic/shofar.png", "../pic/shofar.png","../pic/shofer2.png","../pic/shofer2.png","../pic/rimon.png","../pic/rimon.png"];
 let backCards = document.getElementsByClassName("img-memory")
 for(let i = 0; i < backCards.length; i++){
     let index = Math.floor(Math.random() * (images.length - 0.01));

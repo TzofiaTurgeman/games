@@ -8,18 +8,14 @@ let score=0;
 let changePos;
 let arr=[document.getElementById('div1'),document.getElementById('div4'),document.getElementById('div3'),document.getElementById('div2')];
 
-// let i=0;
-// let rexors=setInterval(()=>{
-    // startGame();
-// },1000);
-
 
 let timerDisplay = document.getElementById('timer');
 let timer;
 let seconds = 40;
-clickOnX();
+// document.getElementById("eix").addEventListener("click", clickOnX());
+// clickOnX();
 function clickOnX(){
-    // document.getElementById("insraction").style.display = "none";
+    document.getElementById("insraction").style.display = "none";
     setTime();
     startGame();
 }

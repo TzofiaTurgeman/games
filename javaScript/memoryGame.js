@@ -32,7 +32,7 @@ for(let i = 0; i < cards.length; i++){
     }
 });
 }
-let images = ["../images/apple1.png", "../images/apple1.png", "../images/fish.png", "../images/fish.png", "../images/goodYear.png", "../images/goodYear.png", "../images/honey1.png", "../images/honey1.png", "../images/pomegranate.png", "../images/pomegranate.png", "../images/shofar.png", "../images/shofar.png"];
+let images = ["../pic/apple1.png", "../pic/apple1.png", "../pic/fish.png", "../pic/fish.png", "../pic/goodYear.png", "../pic/goodYear.png", "../pic/honey1.png", "../pic/honey1.png", "../pic/pomegranate.png", "../pic/pomegranate.png", "../pic/shofar.png", "../pic/shofar.png"];
 let backCards = document.getElementsByClassName("img-memory")
 for(let i = 0; i < backCards.length; i++){
     let index = Math.floor(Math.random() * (images.length - 0.01));
@@ -45,10 +45,6 @@ function compareImg(){
     if(cardsToCompare[0].getElementsByClassName("img-memory")[0].src == cardsToCompare[1].getElementsByClassName("img-memory")[0].src)
     {
         removedCard+=2;
-        // let placeHolder = document.createElement('div');
-        // placeHolder.style.width = "7vw";
-        // placeHolder.style.height = "7vh";
-        // placeHolder.style.backgroundColor = "white";
         setTimeout(() => {
         cardsToCompare[0].parentElement.removeChild(cardsToCompare[0])},1000);
         setTimeout(() => {
@@ -82,5 +78,22 @@ function compareImg(){
         document.getElementsByClassName("gameArea")[0].appendChild(gameOver)
         timer.style.fontSize="70px";
         timer.style.color="pink";
+        let arr = [];
+        if(JSON.parse(localStorage.getItem('arrScores')) != Object)
+        {
+            localStorage.setItem('arrScore', JSON.stringify(arr));
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            arr.push({"uName": localStorage.getItem('userName'), "minutes": minutes, "seconds": remainingSeconds});
+            localStorage.setItem('arr', JSON.stringify(arr));
+        }
+        else{
+            arr = JSON.parse(localStorage.getItem('arrScores'));
+            let arr = JSON.parse(localStorage.getItem('arr'));
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            arr.push({"uName": localStorage.getItem('userName'), "minutes": minutes, "seconds": remainingSeconds});
+            localStorage.setItem('arr', JSON.stringify(arr));
+        }
     }
 }

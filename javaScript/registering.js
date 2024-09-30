@@ -24,6 +24,7 @@ function runSubmit(event) {
     if (exist) {
         arr.push({ "userName": userName, "password": password })
         localStorage.setItem('arr', JSON.stringify(arr));
+        window.location.href = "../index.html";
         alert("ההרשמה בוצעה בהצלחה ");
     }
 }

@@ -26,5 +26,9 @@ function chackIdanitiy(event) {
         document.getElementById("notExist").style.display = "block";
         document.getElementById("span").style.fontSize = "30px";
     }
+    localStorage.setItem('userName', JSON.stringify(userName));
 }
+
+
+
 

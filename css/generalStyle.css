@@ -3,7 +3,7 @@
     flex-direction:row; 
     gap: 10px;
     width:auto;
-    justify-content: center;
+    justify-content: space-between;
 }
 #name{
     font-weight: bold;
@@ -20,11 +20,12 @@
 }
 #logo{
     padding: 0%;
-    top: 50px;
-    right: 50px;
+    top: 0px;
     position: relative;
-    border-radius: 50%;
-    box-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px rgb(93, 91, 91);
+    height: 100px;
+
+    /* border-radius: 50%;
+    box-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px rgb(93, 91, 91); */
 }
 
 header{
@@ -44,7 +45,19 @@ body{
     color: #492a6d;
     direction: rtl;
 }
-
+.loginimg{
+    height: 100px;
+  }
+  .login{
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+  .userName{
+    font-size: 20px;
+    color: white;
+    text-decoration: underline;
+  }
 /* <header> 
         <div class="countiner1">
             <h1 id="name"> game </br> </h1>

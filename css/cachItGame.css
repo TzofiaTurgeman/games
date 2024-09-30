@@ -18,47 +18,57 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    /* height: 100%; */
-    /* margin: 0; */
     height: 100%; 
     margin-left: 60px;
-    
-    
-
 }
+
 #div1{
-    background-color: red;
-     width:45%; 
-     /* height: 50%;  */
+    background-color: rgb(216, 175, 208);
+     width:36%; 
     margin: 0;
     border: 2px solid black;
-    height:350px;
+    height:250px;
 
 }
 #div2{
-    background-color: blue;
-    width:45%; 
-    height:350px;
+    background-color: rgb(106, 72, 118);
+    width:36%; 
+    height:250px;
     margin: 0;
     border: 2px solid black;
 }
 #div3{
-    background-color: blue;
-    width:45%; 
-    height: 350px;
+    background-color: rgb(106, 72, 118);
+    width:36%; 
+    height: 250px;
     margin: 0;
     border: 2px solid black;
 }
 #div4{
-    background-color: blue;
-    width:45%; 
-    height:350px;
+    background-color: rgb(106, 72, 118);
+    width:36%; 
+    height:250px;
     margin: 0;
     border: 2px solid black;
 }
-p{
-    background-color: rgb(54, 96, 97);
+ section p{
+    background-color: rgb(233, 218, 218);
     margin-bottom: 20px;
     margin-top: 20px;
+    font-size: 100px; 
+    border: 1.5px solid rgb(69, 38, 58); 
+    padding: 5px;
+    text-align: center;
+    width:72%; 
 }
+ section{
+    /* margin-left: 200px; */
+    margin-right:350px;
+    margin-top: 130px;
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+     
 
+ }
+ 

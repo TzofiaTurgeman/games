@@ -1,4 +1,4 @@
-/* #insraction{
+#insraction{
     position: absolute;
     display: block;
     width: 90%;
@@ -11,8 +11,9 @@
     justify-content: center;
     z-index: 1;
     line-height: 1.5;
-
-  } */
+    top:163px;
+    margin-right: 40px;
+  }
 
   #countiner{
     display: flex;
@@ -70,5 +71,10 @@
     justify-content: center;
      
 
+ }
+
+ #eix:hover{
+    font-size: 40px;
+    box-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px whitesmoke;
  }
  

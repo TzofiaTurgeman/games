@@ -1,25 +1,27 @@
+
+const arrayValue = localStorage.getItem('userName');
+console.log(arrayValue)
+const uName = JSON.parse(arrayValue)
+document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
+
 let score=0;
 let changePos;
 let arr=[document.getElementById('div1'),document.getElementById('div4'),document.getElementById('div3'),document.getElementById('div2')];
-
-// let i=0;
-// let rexors=setInterval(()=>{
-    // startGame();
-// },1000);
 
 
 let timerDisplay = document.getElementById('timer');
 let timer;
 let seconds = 40;
-clickOnX();
+// document.getElementById("eix").addEventListener("click", clickOnX());
+// clickOnX();
 function clickOnX(){
-    // document.getElementById("insraction").style.display = "none";
+    document.getElementById("insraction").style.display = "none";
     setTime();
     startGame();
 }
 
 function setTime(){
-    seconds = 5;
+    seconds = 40;
     timerDisplay.textContent = "0:40";
     timer = setInterval(() => {
         seconds--;
@@ -61,20 +63,10 @@ function setTime(){
     }, 1000);
 }
 
-
-
-
-
-
 function startGame() {
         changePos = setInterval(()=>{
             swapDivs();
         },2000);
-        // if(i>2){
-        //     swapDivs();
-        // }
-
-    
   }
 
 function increaseScore() {
@@ -85,7 +77,6 @@ function increaseScore() {
     changePos = setInterval(()=>{
         swapDivs();
     },2000);
-    // i=0;
 }
 function decreaseScore() {
     clearInterval(changePos);
@@ -95,7 +86,6 @@ function decreaseScore() {
     changePos = setInterval(()=>{
         swapDivs();
     },2000);
-    // i=0;
 }
 function swapDivs(){
     var g=Math.floor(Math.random()*(arr.length));

@@ -32,7 +32,7 @@ for(let i = 0; i < cards.length; i++){
     }
 });
 }
-let images = ["../images/apple1.png", "../images/apple1.png", "../images/fish.png", "../images/fish.png", "../images/goodYear.png", "../images/goodYear.png", "../images/honey1.png", "../images/honey1.png", "../images/pomegranate.png", "../images/pomegranate.png", "../images/shofar.png", "../images/shofar.png"];
+let images = ["../pic/apple1.png", "../pic/apple1.png", "../pic/fish.png", "../pic/fish.png", "../pic/goodYear.png", "../pic/goodYear.png", "../pic/honey1.png", "../pic/honey1.png", "../pic/pomegranate.png", "../pic/pomegranate.png", "../pic/shofar.png", "../pic/shofar.png"];
 let backCards = document.getElementsByClassName("img-memory")
 for(let i = 0; i < backCards.length; i++){
     let index = Math.floor(Math.random() * (images.length - 0.01));

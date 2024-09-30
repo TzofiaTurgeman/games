@@ -1,6 +1,12 @@
 const arrayValue = localStorage.getItem('userName');
 const uName = JSON.parse(arrayValue)
 document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
+
+function logOut(){
+    alert("בוצעה התנתקות");
+    window.location.href = "../html/index.html";
+}
+
 arr = JSON.parse(localStorage.getItem('arrTimes'));
 let place1 = {...arr[0]};
 let place2 = {minutes:60, seconds:0};

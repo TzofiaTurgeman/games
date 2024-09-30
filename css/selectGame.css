@@ -63,3 +63,19 @@ body{
     height: 500px;
 }
 
+#countinerForLog{
+    display: flex;
+    flex-direction: column;
+}
+
+#logoutBottem{
+    background-color: rgb(194, 49, 119);
+    border: 0px solid black;
+    color: white;
+    font-size: large;
+}
+
+#logoutBottem:hover{
+    text-shadow: 1px 1px 5px black, 0 0 25px white, 0 0 10px whitesmoke;
+    box-shadow: 1px 1px 5px black, 0 0 25px white, 0 0 10px whitesmoke;
+}

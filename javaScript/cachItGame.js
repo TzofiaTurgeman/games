@@ -4,6 +4,11 @@ console.log(arrayValue)
 const uName = JSON.parse(arrayValue)
 document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
 
+function logOut(){
+    alert("בוצעה התנתקות");
+    window.location.href = "../html/index.html";
+}
+
 let score=0;
 let changePos;
 let arr=[document.getElementById('div1'),document.getElementById('div4'),document.getElementById('div3'),document.getElementById('div2')];
@@ -66,7 +71,7 @@ function setTime(){
 function startGame() {
         changePos = setInterval(()=>{
             swapDivs();
-        },2000);
+        },1500);
   }
 
 function increaseScore() {
@@ -76,7 +81,7 @@ function increaseScore() {
     swapDivs();
     changePos = setInterval(()=>{
         swapDivs();
-    },2000);
+    },1500);
 }
 function decreaseScore() {
     clearInterval(changePos);
@@ -85,7 +90,7 @@ function decreaseScore() {
     swapDivs();
     changePos = setInterval(()=>{
         swapDivs();
-    },2000);
+    },1500);
 }
 function swapDivs(){
     var g=Math.floor(Math.random()*(arr.length));

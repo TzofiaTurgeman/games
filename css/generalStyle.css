@@ -39,8 +39,6 @@ header{
 }
 
 body{
-    /* background-color: cadetblue; */
-
     background-color: whitesmoke;
     color: #492a6d;
     direction: rtl;
@@ -57,6 +55,10 @@ body{
     font-size: 20px;
     color: white;
     text-decoration: underline;
+  }
+
+  header a{
+    text-decoration: none;
   }
 /* <header> 
         <div class="countiner1">

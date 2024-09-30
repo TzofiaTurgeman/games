@@ -1,8 +1,6 @@
 const arrayValue = localStorage.getItem('arr');
 let arr = JSON.parse(arrayValue);
-//  const arr = [{ userName: "צופיה ", password: "1234" }, { userName: "אורלי ", password: "1234" }];
 function chackIdanitiy(event) {
-
     event.preventDefault();
     let userName = document.getElementById("pName").value;
     let password = document.getElementById("password").value;

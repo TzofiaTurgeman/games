@@ -1,3 +1,9 @@
+
+const arrayValue = localStorage.getItem('userName');
+console.log(arrayValue)
+const uName = JSON.parse(arrayValue)
+document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
+
 let score=0;
 let changePos;
 let arr=[document.getElementById('div1'),document.getElementById('div4'),document.getElementById('div3'),document.getElementById('div2')];
@@ -19,7 +25,7 @@ function clickOnX(){
 }
 
 function setTime(){
-    seconds = 5;
+    seconds = 40;
     timerDisplay.textContent = "0:40";
     timer = setInterval(() => {
         seconds--;
@@ -41,28 +47,18 @@ function setTime(){
                 gameOver.textContent = "הזמן נגמר!!";
                 gameOver.style.fontSize = "80px";
                 gameOver.style.color = "pink";
-                document.getElementsByClassName("gameArea")[0].appendChild(gameOver)
-                document.getElementById("countiner").style.display="none";
+                document.getElementById("gameArea").removeChild(document.getElementById("countiner"))
+                document.getElementById("gameArea").appendChild(gameOver);
                 timer.style.fontSize="70px";
                 timer.style.color="pink";
         }
     }, 1000);
 }
 
-
-
-
-
-
 function startGame() {
         changePos = setInterval(()=>{
             swapDivs();
         },2000);
-        // if(i>2){
-        //     swapDivs();
-        // }
-
-    
   }
 
 function increaseScore() {
@@ -73,7 +69,6 @@ function increaseScore() {
     changePos = setInterval(()=>{
         swapDivs();
     },2000);
-    // i=0;
 }
 function decreaseScore() {
     clearInterval(changePos);
@@ -83,7 +78,6 @@ function decreaseScore() {
     changePos = setInterval(()=>{
         swapDivs();
     },2000);
-    // i=0;
 }
 function swapDivs(){
     var g=Math.floor(Math.random()*(arr.length));

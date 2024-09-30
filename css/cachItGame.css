@@ -1,4 +1,4 @@
-/* #insraction{
+#insraction{
     position: absolute;
     display: block;
     width: 90%;
@@ -11,8 +11,9 @@
     justify-content: center;
     z-index: 1;
     line-height: 1.5;
-
-  } */
+    top:163px;
+    margin-right: 40px;
+  }
 
   #countiner{
     display: flex;

@@ -1,3 +1,7 @@
+const arrayValue = localStorage.getItem('userName');
+console.log(arrayValue)
+const uName = JSON.parse(arrayValue)
+document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
 let timerDisplay = document.getElementById('timer');
 let timer;
 let seconds = 0;
@@ -68,32 +72,42 @@ function compareImg(){
             document.getElementsByClassName("gameArea")[0].removeChild(document.getElementsByClassName("gameArea")[0].firstChild)
         }
         let gameOver = document.createElement('div');
-        gameOver.style.width = "80vw";
-        gameOver.style.height = "40vh";
-        gameOver.style.backgroundColor = "whit";
+        gameOver.style.width = "100vw";
+        gameOver.style.height = "10vh";
+        gameOver.style.textAlign = "center";
+        gameOver.style.justifyContent = "center";
+        gameOver.style.backgroundColor = "ligth-pink";
         gameOver.style.fontWeight="bold"
-        gameOver.textContent = "כול הכבוד!!";
+        gameOver.textContent = "כל הכבוד!!";
         gameOver.style.fontSize = "80px";
         gameOver.style.color = "pink";
         document.getElementsByClassName("gameArea")[0].appendChild(gameOver)
-        timer.style.fontSize="70px";
-        timer.style.color="pink";
+        // timer.style.fontSize = "70px";
+        // timer.style.color = "pink";
+        let restart = document.createElement('button');
+        restart.style.width = "10vw";
+        restart.style.height = "5vh";
+        restart.textContent = "משחק חדש";
+        restart.addEventListener("click", function(){
+            window.location.href = "./memoryGame.html";
+        });
+        document.getElementsByClassName("gameArea")[0].appendChild(restart)
         let arr = [];
-        if(JSON.parse(localStorage.getItem('arrScores')) != Object)
+        if(!JSON.parse(localStorage.getItem('arrScores')))
         {
-            localStorage.setItem('arrScore', JSON.stringify(arr));
+            localStorage.setItem('arrScores', JSON.stringify(arr));
             const minutes = Math.floor(seconds / 60);
             const remainingSeconds = seconds % 60;
-            arr.push({"uName": localStorage.getItem('userName'), "minutes": minutes, "seconds": remainingSeconds});
-            localStorage.setItem('arr', JSON.stringify(arr));
+            arr.push({"uName": JSON.parse(localStorage.getItem('userName')), "minutes": minutes, "seconds": remainingSeconds});
+            localStorage.setItem('arrScores', JSON.stringify(arr));
         }
         else{
             arr = JSON.parse(localStorage.getItem('arrScores'));
-            let arr = JSON.parse(localStorage.getItem('arr'));
             const minutes = Math.floor(seconds / 60);
             const remainingSeconds = seconds % 60;
-            arr.push({"uName": localStorage.getItem('userName'), "minutes": minutes, "seconds": remainingSeconds});
-            localStorage.setItem('arr', JSON.stringify(arr));
+            arr.push({"uName": JSON.parse(localStorage.getItem('userName')), "minutes": minutes, "seconds": remainingSeconds});
+            localStorage.setItem('arrScores', JSON.stringify(arr));
         }
     }
 }
+

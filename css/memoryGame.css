@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     width: 34.5vw;
     margin-top: 70px;
+    justify-content: center;
 }
 
   .flip-card{

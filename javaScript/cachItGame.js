@@ -1,29 +1,89 @@
-var score=0;
-var i=0;
-var arr=[document.getElementById('div1'),document.getElementById('div4'),document.getElementById('div3'),document.getElementById('div2')];
+let score=0;
+let changePos;
+let arr=[document.getElementById('div1'),document.getElementById('div4'),document.getElementById('div3'),document.getElementById('div2')];
+
+// let i=0;
+// let rexors=setInterval(()=>{
+    // startGame();
+// },1000);
+
+
+let timerDisplay = document.getElementById('timer');
+let timer;
+let seconds = 40;
+clickOnX();
+function clickOnX(){
+    // document.getElementById("insraction").style.display = "none";
+    setTime();
+    startGame();
+}
+
+function setTime(){
+    seconds = 5;
+    timerDisplay.textContent = "0:40";
+    timer = setInterval(() => {
+        seconds--;
+        const minutes =0;
+        if(seconds < 10){
+            timerDisplay.textContent = minutes + ":" + "0" + seconds;
+        }
+        else{
+            timerDisplay.textContent = minutes + ":" + seconds;
+        }
+        if(seconds<=0){
+            clearInterval(timer);
+            clearInterval(changePos);
+                let gameOver = document.createElement('div');
+                gameOver.style.width = "80vw";
+                gameOver.style.height = "40vh";
+                gameOver.style.backgroundColor = "whit";
+                gameOver.style.fontWeight="bold"
+                gameOver.textContent = "הזמן נגמר!!";
+                gameOver.style.fontSize = "80px";
+                gameOver.style.color = "pink";
+                document.getElementsByClassName("gameArea")[0].appendChild(gameOver)
+                document.getElementById("countiner").style.display="none";
+                timer.style.fontSize="70px";
+                timer.style.color="pink";
+        }
+    }, 1000);
+}
+
+
+
+
+
+
 function startGame() {
-    if( score>100){
-        i+=1.25
-    }else{
-        i++;
-    }
-    if(i>2){
-        swapDivs();
-    }
-        setTimeout(startGame, 1000);
+        changePos = setInterval(()=>{
+            swapDivs();
+        },2000);
+        // if(i>2){
+        //     swapDivs();
+        // }
+
+    
   }
 
 function increaseScore() {
+    clearInterval(changePos);
     score+=5; 
-    document.getElementById('score').innerHTML = 'score: ' + score;
+    document.getElementById('score').innerHTML = 'ציון: ' + score;
     swapDivs();
-    i=0;
+    changePos = setInterval(()=>{
+        swapDivs();
+    },2000);
+    // i=0;
 }
 function decreaseScore() {
+    clearInterval(changePos);
     score-=5; 
-    document.getElementById('score').innerHTML = 'score: ' + score; 
+    document.getElementById('score').innerHTML = 'ציון: ' + score; 
     swapDivs();
-    i=0;
+    changePos = setInterval(()=>{
+        swapDivs();
+    },2000);
+    // i=0;
 }
 function swapDivs(){
     var g=Math.floor(Math.random()*(arr.length));

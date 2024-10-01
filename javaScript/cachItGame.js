@@ -99,7 +99,7 @@ function decreaseScore() {
     swapDivs();
     changePos = setInterval(()=>{
         swapDivs();
-    },800);
+    },1800);
 }
 function swapDivs(){
     var g=Math.floor(Math.random()*(arr.length));

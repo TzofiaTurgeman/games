@@ -80,7 +80,7 @@ function setTime(){
 function startGame() {
         changePos = setInterval(()=>{
             swapDivs();
-        },1000);
+        },1500);
   }
 
 function increaseScore() {
@@ -90,7 +90,7 @@ function increaseScore() {
     swapDivs();
     changePos = setInterval(()=>{
         swapDivs();
-    },800);
+    },1500);
 }
 function decreaseScore() {
     clearInterval(changePos);
@@ -99,7 +99,7 @@ function decreaseScore() {
     swapDivs();
     changePos = setInterval(()=>{
         swapDivs();
-    },1800);
+    },1500);
 }
 function swapDivs(){
     var g=Math.floor(Math.random()*(arr.length));

@@ -74,22 +74,20 @@
     align-items: center;
     margin-top: 70px;
   }
-
   #insraction{
     position: absolute;
     display: block;
     width: 90%;
     height: 75%;
     font-size: 40px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
     background-color:rgb(180, 153, 171);
     border-radius: 40px;
     padding: 30px;
     justify-content: center;
     z-index: 1;
     line-height: 1.5;
-
   }
+  
 
   #eix:hover{
     font-size: 40px;

@@ -6,7 +6,7 @@ document.getElementsByClassName('userName')[0].textContent = "היי, " + uName;
 
 function logOut(){
     alert("בוצעה התנתקות");
-    window.location.href = "../html/index.html";
+    window.location.href = "../index.html";
 }
 
 let score=0;

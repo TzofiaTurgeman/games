@@ -45,10 +45,15 @@ body{
     gap: 2px;
 
 }
+  
+  .game:hover{
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
+
 
 .inGameDiv{
-    /* width: 400px;
-    height: 400px; */
     width: 86%;
     height: 86%;
     margin: 3px;
@@ -69,10 +74,12 @@ body{
 }
 
 #logoutBottem{
-    background-color: rgb(194, 49, 119);
+    background-color: #c9377b;
     border: 0px solid black;
-    color: white;
+    color: whitesmoke;
     font-size: large;
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #logoutBottem:hover{

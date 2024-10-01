@@ -92,7 +92,7 @@ function compareImg(){
         gameOver.style.fontWeight="bold"
         gameOver.textContent = "כל הכבוד!!";
         gameOver.style.fontSize = "80px";
-        gameOver.style.color = "pink";
+        gameOver.style.color = "#c9377b";
         document.getElementsByClassName("gameArea")[0].appendChild(gameOver)
         // timer.style.fontSize = "70px";
         // timer.style.color = "pink";

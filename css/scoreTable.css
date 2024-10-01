@@ -23,10 +23,12 @@ main{
 }
 
 #logoutBottem{
-    background-color: rgb(194, 49, 119);
+    background-color: #c9377b;
     border: 0px solid black;
-    color: white;
+    color: whitesmoke;
     font-size: large;
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #logoutBottem:hover{

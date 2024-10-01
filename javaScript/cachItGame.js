@@ -26,8 +26,8 @@ function clickOnX(){
 }
 
 function setTime(){
-    seconds = 40;
-    timerDisplay.textContent = "0:40";
+    seconds = 30;
+    timerDisplay.textContent = "0:30";
     timer = setInterval(() => {
         seconds--;
         const minutes =0;

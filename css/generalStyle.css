@@ -18,6 +18,13 @@
     line-height: 80px;
     top:100px;
 }
+
+#name:hover{
+  text-shadow: 1px 1px 5px black, 0 0 30px white, 0 0 10px whitesmoke;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
 #logo{
     padding: 0%;
     top: 0px;

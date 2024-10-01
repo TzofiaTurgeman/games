@@ -26,7 +26,7 @@ function clickOnX(){
 }
 
 function setTime(){
-    seconds = 5;
+    seconds = 40;
     timerDisplay.textContent = "0:40";
     timer = setInterval(() => {
         seconds--;
@@ -48,7 +48,7 @@ function setTime(){
                 gameOver.style.justifyContent = "center";
                 gameOver.textContent = "הזמן נגמר!!";
                 gameOver.style.fontSize = "80px";
-                gameOver.style.color = "pink";
+                gameOver.style.color = "#c9377b";
                 document.getElementById("gameArea").appendChild(gameOver)
                 document.getElementById("countiner").style.display="none";
                 let restart = document.createElement('button');
@@ -80,7 +80,7 @@ function setTime(){
 function startGame() {
         changePos = setInterval(()=>{
             swapDivs();
-        },1500);
+        },1000);
   }
 
 function increaseScore() {
@@ -90,7 +90,7 @@ function increaseScore() {
     swapDivs();
     changePos = setInterval(()=>{
         swapDivs();
-    },1500);
+    },800);
 }
 function decreaseScore() {
     clearInterval(changePos);
@@ -99,7 +99,7 @@ function decreaseScore() {
     swapDivs();
     changePos = setInterval(()=>{
         swapDivs();
-    },1500);
+    },800);
 }
 function swapDivs(){
     var g=Math.floor(Math.random()*(arr.length));

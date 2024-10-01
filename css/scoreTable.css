@@ -5,10 +5,10 @@ th{
 }
 td{
     font-size: 20px;
-    
+    background-color: rgb(255, 225, 229);
 }
 table{
-    background-color: rgb(255, 225, 229);
+    background-color: white;
     width: 40vw;
 }
 main{

@@ -6,8 +6,8 @@ let timer;
 let seconds;
 function setTime(){
     document.getElementById("submit").disabled = true;
-    seconds = 40;
-    document.getElementById("timer").textContent = "0:40";
+    seconds = 30;
+    document.getElementById("timer").textContent = "0:30";
     timer = setInterval(() => {
         seconds--;
         const minutes =0;
@@ -23,14 +23,17 @@ function setTime(){
             document.getElementById("timer").style.display = "none";
             document.getElementById("tryAgain").style.display = "none";
             countOfTimes = 0;
+            document.getElementById("form1").style.opacity = "1";
 
         }
     }, 1000);
 }
 function chackIdanitiy(event) {
+    document.getElementById("notExist").style.display = "none";
     if(countOfTimes >2){
         document.getElementById("timer").style.display = "block";
         document.getElementById("tryAgain").style.display = "block";
+        document.getElementById("form1").style.opacity = "0.5";
         setTime()
     }
     countOfTimes++;

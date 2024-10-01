@@ -137,5 +137,5 @@ document.getElementById("score1").textContent = score1.score;
 document.getElementById("uName-score2").textContent = score2.uName;
 document.getElementById("score2").textContent = score2.score;
 
-document.getElementById("uName-score3").textContent = score2.uName;
-document.getElementById("score3").textContent = score2.score;
+document.getElementById("uName-score3").textContent = score3.uName;
+document.getElementById("score3").textContent = score3.score;
